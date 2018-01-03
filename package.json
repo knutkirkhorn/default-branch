@@ -1,0 +1,25 @@
+{
+  "name": "default-branch",
+  "version": "1.0.0",
+  "description": "Get the default branch of a GitHub repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knutakir/default-branch.git"
+  },
+  "keywords": [
+    "default",
+    "branch",
+    "GitHub",
+    "repository"
+  ],
+  "author": "Knut Kirkhorn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Knutakir/default-branch/issues"
+  },
+  "homepage": "https://github.com/Knutakir/default-branch#readme"
+}
