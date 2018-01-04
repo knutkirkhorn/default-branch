@@ -1,6 +1,6 @@
 {
   "name": "default-branch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get the default branch of a GitHub repository",
   "main": "index.js",
   "scripts": {
