@@ -2,13 +2,13 @@
 const https = require('https');
 const regexp = /class="branch-name css-truncate-target">(.*?)</g;
 
-function getDefaultBranch(url) {
-    if (!url.includes('github.com')) {
-        url = 'https://github.com/' + url;
+function getDefaultBranch(path) {
+    if (!path.includes('github.com')) {
+        path = 'https://github.com/' + path;
     }
     
     return new Promise( (resolve, reject) => {
-        https.get(url + '/branches', (response) => {
+        https.get(path + '/branches', (response) => {
             if (response.statusCode < 200 || response.statusCode > 299) {
                 reject(new Error('Failed to load url: ' + res.statusCode));
             }
@@ -21,9 +21,9 @@ function getDefaultBranch(url) {
             });
 
             response.on('end', function() {
-                //TODO: try?
+                //TODO: try, catch?
                 const regexMatch = data.match(regexp);
-                //The first item (0) will be at the top and will be the default branch
+                // The first item (0) will be at the top and will be the default branch
                 resolve(regexMatch[0].split('>')[1].split('<')[0]);
             });
         }).on('error', (error) => {
@@ -32,6 +32,6 @@ function getDefaultBranch(url) {
     });
 }
 
-module.exports = url => {
-    return getDefaultBranch(url);
+module.exports = path => {
+    return getDefaultBranch(path);
 };
