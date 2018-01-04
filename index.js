@@ -10,7 +10,7 @@ function getDefaultBranch(path) {
     return new Promise( (resolve, reject) => {
         https.get(path + '/branches', (response) => {
             if (response.statusCode < 200 || response.statusCode > 299) {
-                reject(new Error('Failed to load url: ' + res.statusCode));
+                reject(new Error('Failed to load url: ' + response.statusCode));
             }
 
             response.setEncoding('UTF-8');
