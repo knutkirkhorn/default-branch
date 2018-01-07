@@ -25,5 +25,9 @@ defaultBranch('https://github.com/Knutakir/btc-value-cli').then(branch => {
 ### defaultBranch(path)
 Returns the default branch of a repository. The `path` can be `username/repo-name`, or a full url to the repository (example: `https://github.com/Knutakir/btc-value-cli`).
 
+## Related
+- [has-license](https://github.com/Knutakir/has-license) - Check if a repository has a license
+- [gh-repo-has-license](https://github.com/Knutakir/gh-repo-has-license) - Check if a GitHub repository has a license
+
 ## License
 MIT © [Knut Kirkhorn](LICENSE)
