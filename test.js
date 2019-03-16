@@ -7,6 +7,12 @@ test('long version', t => {
     });
 });
 
+test('long version 2', t => {
+    return m('https://github.com/Knutakir/has-license').then(branch => {
+        t.is(branch, 'master');
+    });
+});
+
 test('short version', t => {
     return m('Knutakir/emorjis').then(branch => {
         t.is(branch, 'master');

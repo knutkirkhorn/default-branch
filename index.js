@@ -1,6 +1,6 @@
 'use strict';
 const https = require('https');
-const regexp = /\?name=(.*)">/g; // The default branch is always the first on the page
+const regexp = /class="(.*)branch-name(.*)>(.*)</g; // The default branch is always the first on the page
 
 module.exports = path => {
     if (!(path.startsWith('https://github.com/') || path.startsWith('http://github.com/'))) {       
@@ -29,7 +29,7 @@ module.exports = path => {
             response.on('end', function() {
                 try {
                     // The first item (0) will be at the top and will be the default branch
-                    const regexMatch = data.match(regexp)[0].split('=')[1].split('"')[0];
+                    const regexMatch = data.match(regexp)[0].split('>')[1].split('<')[0];
                     return resolve(regexMatch);
                 } catch (err) {
                     return reject(new Error('Failed to get default branch: ' + err));
