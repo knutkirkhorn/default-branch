@@ -28,16 +28,15 @@ module.exports = path => {
 
             response.on('end', function() {
                 try {
-                    const regexMatch = regexp.exec(data)[1];
                     // The first item (0) will be at the top and will be the default branch
+                    const regexMatch = data.match(regexp)[0].split('=')[1].split('"')[0];
                     return resolve(regexMatch);
                 } catch (err) {
-                    reject(new Error('Failed to get default branch: ' + err));
-                    return;
+                    return reject(new Error('Failed to get default branch: ' + err));
                 }
             });
         }).on('error', (error) => {
-            reject(error);
+            return reject(error);
         });
     });
 };
