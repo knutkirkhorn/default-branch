@@ -3,14 +3,11 @@ const https = require('https');
 const regexp = /class="(.*)branch-name(.*)>(.*)</g; // The default branch is always the first on the page
 
 module.exports = path => {
-    if (!(path.startsWith('https://github.com/') || path.startsWith('http://github.com/'))) {
-        path = 'https://github.com/' + path;
-    }
-
-    if (path.startsWith('http://github.com/')) {
-        // Force https connection
-        path = path.substr(0, 4) + 's' + path.substr(4);
-    }
+    // Normalize path to be URL relative to https://github.com/ by default
+    const url = new URL(path, 'https://github.com/');
+    // Force https connection
+    url.protocol = 'https:';
+    path = url.toString();
 
     return new Promise((resolve, reject) => {
         https.get(path + '/branches', response => {
