@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/Knutakir/default-branch#readme",
   "devDependencies": {
-    "ava": "^2.2.0"
+    "ava": "^3.14.0"
   }
 }

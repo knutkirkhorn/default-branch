@@ -1,7 +1,7 @@
-import test from 'ava';
-import https from 'https';
-import { EventEmitter } from 'events';
-import defaultBranch from '.';
+const test = require('ava');
+const https = require('https');
+const { EventEmitter } = require('events');
+const defaultBranch = require('.');
 
 test('long version', async t => {
     const branch = await defaultBranch('https://github.com/Knutakir/btc-value-cli');
