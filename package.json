@@ -4,8 +4,12 @@
   "description": "Get the default branch of a GitHub repository",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava && tsd"
   },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Knutakir/default-branch.git"
@@ -23,6 +27,7 @@
   },
   "homepage": "https://github.com/Knutakir/default-branch#readme",
   "devDependencies": {
-    "ava": "^3.14.0"
+    "ava": "^3.14.0",
+    "tsd": "^0.14.0"
   }
 }
