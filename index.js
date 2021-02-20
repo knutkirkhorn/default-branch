@@ -1,4 +1,5 @@
 'use strict';
+
 const https = require('https');
 const regexp = /class="(.*)branch-name(.*)>(.*)</g; // The default branch is always the first on the page
 
@@ -7,12 +8,12 @@ module.exports = path => {
     const url = new URL(path, 'https://github.com/');
     // Force https connection
     url.protocol = 'https:';
-    path = url.toString();
+    const repositoryPath = url.toString();
 
     return new Promise((resolve, reject) => {
-        https.get(path + '/branches', response => {
+        https.get(`${repositoryPath}/branches`, response => {
             if (response.statusCode < 200 || response.statusCode > 299) {
-                reject(new Error('Failed to load url: ' + response.statusCode));
+                reject(new Error(`Failed to load url: ${response.statusCode}`));
                 return;
             }
 
@@ -29,7 +30,7 @@ module.exports = path => {
                     const regexMatch = data.match(regexp)[0].split('>')[1].split('<')[0];
                     return resolve(regexMatch);
                 } catch (error) {
-                    return reject(new Error('Failed to get default branch: ' + error));
+                    return reject(new Error(`Failed to get default branch: ${error}`));
                 }
             });
         }).on('error', error => {

@@ -4,7 +4,8 @@
   "description": "Get the default branch of a GitHub repository",
   "main": "index.js",
   "scripts": {
-    "test": "ava && tsd"
+    "test": "ava && tsd",
+    "lint": "eslint ."
   },
   "files": [
     "index.js",
@@ -28,6 +29,9 @@
   "homepage": "https://github.com/Knutakir/default-branch#readme",
   "devDependencies": {
     "ava": "^3.14.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "tsd": "^0.14.0"
   }
 }

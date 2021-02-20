@@ -1,0 +1,45 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {"SwitchCase": 1}
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "linebreak-style": "off",
+        "no-console": "off",
+        "object-curly-spacing": "off",
+        "comma-dangle": "off",
+        "arrow-parens": "off",
+        "max-len": "off",
+        "no-plusplus": "off",
+        "strict": "off",
+        "arrow-body-style": "off",
+        "consistent-return": "off",
+        "no-loop-func": "off",
+        "no-shadow": "off",
+        "import/newline-after-import": "off",
+        "no-await-in-loop": "off",
+        "no-constant-condition": "off",
+        "operator-linebreak": "off"
+    }
+}

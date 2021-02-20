@@ -19,7 +19,7 @@ test('short version', async t => {
 });
 
 test('enterprise GitHub', async t => {
-    const get = https.get;
+    const {get} = https;
     let url;
     // Mock https.get
     https.get = (opts, callback) => {
@@ -28,16 +28,17 @@ test('enterprise GitHub', async t => {
         response.setEncoding = () => {};
         Promise.resolve().then(() => {
             callback(response);
-            response.emit('data',
-                `<html><body><a class="branch-name" href="/org/repo">default</a></body></html>`
+            response.emit(
+                'data',
+                '<html><body><a class="branch-name" href="/org/repo">default</a></body></html>'
             );
             response.emit('end');
-        })
+        });
         return new EventEmitter();
     };
     const branch = await defaultBranch('https://github.test.corp/org/repo');
     // Restore original https.get
     https.get = get;
-    t.is(url, 'https://github.test.corp/org/repo/branches')
+    t.is(url, 'https://github.test.corp/org/repo/branches');
     t.is(branch, 'default');
 });
