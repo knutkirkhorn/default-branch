@@ -1,6 +1,6 @@
 const test = require('ava');
 const https = require('https');
-const { EventEmitter } = require('events');
+const {EventEmitter} = require('events');
 const defaultBranch = require('.');
 
 test('long version', async t => {

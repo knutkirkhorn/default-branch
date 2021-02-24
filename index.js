@@ -1,6 +1,7 @@
 'use strict';
 
 const https = require('https');
+
 const regexp = /class="(.*)branch-name(.*)>(.*)</g; // The default branch is always the first on the page
 
 module.exports = path => {
@@ -33,8 +34,6 @@ module.exports = path => {
                     return reject(new Error(`Failed to get default branch: ${error}`));
                 }
             });
-        }).on('error', error => {
-            return reject(error);
-        });
+        }).on('error', error => reject(error));
     });
 };
