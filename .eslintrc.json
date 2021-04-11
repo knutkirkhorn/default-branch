@@ -5,10 +5,11 @@
     },
     "extends": [
         "eslint:recommended",
-        "airbnb-base"
+        "airbnb-base",
+        "plugin:ava/recommended"
     ],
     "parserOptions": {
-        "ecmaVersion": 11,
+        "ecmaVersion": 2021,
         "sourceType": "module"
     },
     "rules": {
@@ -41,8 +42,6 @@
         "max-len": "off",
         "no-plusplus": "off",
         "strict": "off",
-        "consistent-return": "off",
-        "no-loop-func": "off",
-        "no-shadow": "off"
+        "import/extensions": ["error", "always"]
     }
 }
