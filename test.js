@@ -5,17 +5,17 @@ const defaultBranch = require('.');
 
 test('long version', async t => {
     const branch = await defaultBranch('https://github.com/Knutakir/btc-value-cli');
-    t.is(branch, 'master');
+    t.is(branch, 'main');
 });
 
 test('long version 2', async t => {
     const branch = await defaultBranch('https://github.com/Knutakir/has-license');
-    t.is(branch, 'master');
+    t.is(branch, 'main');
 });
 
 test('short version', async t => {
     const branch = await defaultBranch('Knutakir/emorjis');
-    t.is(branch, 'master');
+    t.is(branch, 'main');
 });
 
 test('enterprise GitHub', async t => {

@@ -1,4 +1,4 @@
-# default-branch [![Build Status](https://travis-ci.org/Knutakir/default-branch.svg?branch=master)](https://travis-ci.org/Knutakir/default-branch)
+# default-branch [![Build Status](https://travis-ci.org/Knutakir/default-branch.svg?branch=main)](https://travis-ci.org/Knutakir/default-branch)
 > Get the default branch of a GitHub repository
 
 ## Installation
@@ -12,12 +12,12 @@ const defaultBranch = require('default-branch');
 
 defaultBranch('Knutakir/emorjis').then(branch => {
     console.log(branch);
-    // => master
+    // => main
 });
 
 defaultBranch('https://github.com/Knutakir/btc-value-cli').then(branch => {
     console.log(branch);
-    // => master
+    // => main
 });
 
 defaultBranch('https://enterprise.github.corp/org/repo').then(branch => {
