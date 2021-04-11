@@ -10,12 +10,12 @@ import defaultBranch from 'default-branch';
 
 defaultBranch('Knutakir/emorjis').then(branch => {
     console.log(branch);
-    // => master
+    // => main
 });
 
 defaultBranch('https://github.com/Knutakir/btc-value-cli').then(branch => {
     console.log(branch);
-    // => master
+    // => main
 });
 
 defaultBranch('https://enterprise.github.corp/org/repo').then(branch => {
