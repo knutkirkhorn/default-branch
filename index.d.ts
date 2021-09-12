@@ -8,12 +8,12 @@ Get the default branch of a GitHub repository
 ```
 import defaultBranch from 'default-branch';
 
-defaultBranch('Knutakir/emorjis').then(branch => {
+defaultBranch('knutkirkhorn/emorjis').then(branch => {
     console.log(branch);
     // => main
 });
 
-defaultBranch('https://github.com/Knutakir/btc-value-cli').then(branch => {
+defaultBranch('https://github.com/knutkirkhorn/btc-value-cli').then(branch => {
     console.log(branch);
     // => main
 });

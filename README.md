@@ -1,4 +1,4 @@
-# default-branch [![Build Status](https://travis-ci.org/Knutakir/default-branch.svg?branch=main)](https://travis-ci.org/Knutakir/default-branch)
+# default-branch [![Build Status](https://travis-ci.org/knutkirkhorn/default-branch.svg?branch=main)](https://travis-ci.org/knutkirkhorn/default-branch)
 > Get the default branch of a GitHub repository
 
 ## Installation
@@ -10,12 +10,12 @@ $ npm install default-branch
 ```js
 const defaultBranch = require('default-branch');
 
-defaultBranch('Knutakir/emorjis').then(branch => {
+defaultBranch('knutkirkhorn/emorjis').then(branch => {
     console.log(branch);
     // => main
 });
 
-defaultBranch('https://github.com/Knutakir/btc-value-cli').then(branch => {
+defaultBranch('https://github.com/knutkirkhorn/btc-value-cli').then(branch => {
     console.log(branch);
     // => main
 });
@@ -28,11 +28,11 @@ defaultBranch('https://enterprise.github.corp/org/repo').then(branch => {
 
 ## API
 ### defaultBranch(path)
-Returns the default branch of a repository. The `path` can be `username/repo-name`, or a full url to the repository (example: `https://github.com/Knutakir/btc-value-cli`).
+Returns the default branch of a repository. The `path` can be `username/repo-name`, or a full url to the repository (example: `https://github.com/knutkirkhorn/btc-value-cli`).
 
 ## Related
-- [has-license](https://github.com/Knutakir/has-license) - Check if a repository has a license
-- [gh-repo-has-license](https://github.com/Knutakir/gh-repo-has-license) - Check if a GitHub repository has a license
+- [has-license](https://github.com/knutkirkhorn/has-license) - Check if a repository has a license
+- [gh-repo-has-license](https://github.com/knutkirkhorn/gh-repo-has-license) - Check if a GitHub repository has a license
 
 ## License
 MIT © [Knut Kirkhorn](LICENSE)

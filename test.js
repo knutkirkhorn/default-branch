@@ -4,17 +4,17 @@ const {EventEmitter} = require('events');
 const defaultBranch = require('.');
 
 test('long version', async t => {
-    const branch = await defaultBranch('https://github.com/Knutakir/btc-value-cli');
+    const branch = await defaultBranch('https://github.com/knutkirkhorn/btc-value-cli');
     t.is(branch, 'main');
 });
 
 test('long version 2', async t => {
-    const branch = await defaultBranch('https://github.com/Knutakir/has-license');
+    const branch = await defaultBranch('https://github.com/knutkirkhorn/has-license');
     t.is(branch, 'main');
 });
 
 test('short version', async t => {
-    const branch = await defaultBranch('Knutakir/emorjis');
+    const branch = await defaultBranch('knutkirkhorn/emorjis');
     t.is(branch, 'main');
 });
 

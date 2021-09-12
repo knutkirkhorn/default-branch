@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Knutakir/default-branch.git"
+    "url": "git+https://github.com/knutkirkhorn/default-branch.git"
   },
   "keywords": [
     "default",
@@ -24,9 +24,9 @@
   "author": "Knut Kirkhorn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Knutakir/default-branch/issues"
+    "url": "https://github.com/knutkirkhorn/default-branch/issues"
   },
-  "homepage": "https://github.com/Knutakir/default-branch#readme",
+  "homepage": "https://github.com/knutkirkhorn/default-branch#readme",
   "devDependencies": {
     "ava": "^3.15.0",
     "eslint": "^7.24.0",
