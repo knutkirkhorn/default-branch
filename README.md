@@ -1,4 +1,4 @@
-# default-branch [![Build Status](https://travis-ci.org/knutkirkhorn/default-branch.svg?branch=main)](https://travis-ci.org/knutkirkhorn/default-branch)
+# default-branch
 > Get the default branch of a GitHub repository
 
 ## Installation
