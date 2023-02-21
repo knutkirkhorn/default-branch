@@ -1,38 +1,44 @@
 {
-  "name": "default-branch",
-  "version": "1.1.1",
-  "description": "Get the default branch of a GitHub repository",
-  "main": "index.js",
-  "scripts": {
-    "test": "ava && tsd",
-    "lint": "eslint ."
-  },
-  "files": [
-    "index.js",
-    "index.d.ts"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/knutkirkhorn/default-branch.git"
-  },
-  "keywords": [
-    "default",
-    "branch",
-    "GitHub",
-    "repository"
-  ],
-  "author": "Knut Kirkhorn",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/knutkirkhorn/default-branch/issues"
-  },
-  "homepage": "https://github.com/knutkirkhorn/default-branch#readme",
-  "devDependencies": {
-    "ava": "^3.15.0",
-    "eslint": "^7.24.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-ava": "^12.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "tsd": "^0.14.0"
-  }
+	"name": "default-branch",
+	"version": "1.1.1",
+	"description": "Get the default branch of a GitHub repository",
+	"scripts": {
+		"test": "ava && tsd",
+		"lint": "eslint ."
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/knutkirkhorn/default-branch.git"
+	},
+	"keywords": [
+		"default",
+		"branch",
+		"GitHub",
+		"repository"
+	],
+	"author": "Knut Kirkhorn",
+	"type": "module",
+	"exports": "./index.js",
+	"types": "./index.d.ts",
+	"engines": {
+		"node": ">=14.16"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/knutkirkhorn/default-branch/issues"
+	},
+	"homepage": "https://github.com/knutkirkhorn/default-branch#readme",
+	"devDependencies": {
+		"ava": "^5.2.0",
+		"eslint": "^8.34.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-ava": "^14.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-unicorn": "^45.0.2",
+		"tsd": "^0.25.0"
+	}
 }

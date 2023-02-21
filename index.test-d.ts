@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import defaultBranch = require('.');
+import defaultBranch from './index.js';
 
 expectType<Promise<string>>(defaultBranch('knutkirkhorn/emorjis'));
 expectType<Promise<string>>(defaultBranch('https://github.com/knutkirkhorn/btc-value-cli'));

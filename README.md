@@ -5,28 +5,22 @@
 ## Installation
 
 ```
-$ npm install default-branch
+npm install default-branch
 ```
 
 ## Usage
 
 ```js
-const defaultBranch = require('default-branch');
+import defaultBranch from 'default-branch';
 
-defaultBranch('knutkirkhorn/emorjis').then(branch => {
-    console.log(branch);
-    // => main
-});
+console.log(await defaultBranch('knutkirkhorn/emorjis'));
+// => main
 
-defaultBranch('https://github.com/knutkirkhorn/btc-value-cli').then(branch => {
-    console.log(branch);
-    // => main
-});
+console.log(await defaultBranch('https://github.com/knutkirkhorn/btc-value-cli'));
+// => main
 
-defaultBranch('https://enterprise.github.corp/org/repo').then(branch => {
-    console.log(branch);
-    // => default
-});
+console.log(await defaultBranch('https://enterprise.github.corp/org/repo'));
+// => default
 ```
 
 ## API
