@@ -18,6 +18,4 @@ console.log(await defaultBranch('https://enterprise.github.corp/org/repo'));
 // => default
 ```
 */
-declare function defaultBranch(path: string): Promise<string>;
-
-export = defaultBranch;
+export default function defaultBranch(path: string): Promise<string>;
