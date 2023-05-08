@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import test from 'ava';
 import https from 'node:https';
 import {EventEmitter} from 'node:events';

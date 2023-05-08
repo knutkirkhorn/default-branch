@@ -26,6 +26,7 @@
 		"max-len": "off",
 		"no-plusplus": "off",
 		"strict": "off",
-		"import/extensions": ["error", "always"]
+		"import/extensions": ["error", "always"],
+		"import/no-unresolved": "off"
 	}
 }
