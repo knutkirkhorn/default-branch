@@ -34,11 +34,11 @@
 	"homepage": "https://github.com/knutkirkhorn/default-branch#readme",
 	"devDependencies": {
 		"ava": "^5.2.0",
-		"eslint": "^8.34.0",
+		"eslint": "^8.40.0",
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-plugin-ava": "^14.0.0",
 		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-unicorn": "^45.0.2",
-		"tsd": "^0.25.0"
+		"eslint-plugin-unicorn": "^47.0.0",
+		"tsd": "^0.28.1"
 	}
 }

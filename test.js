@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-event-target */
 import test from 'ava';
 import https from 'node:https';
 import {EventEmitter} from 'node:events';
